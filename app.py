@@ -124,3 +124,38 @@ def move(name, city="Seattle", state="Washington"):
 move("Charlie", "Los Angeles", "California")
 move(city="San Francisco", name="Mark", state="California")
 
+def moving(name, city="Chicago", state="Illinois"):
+  msg = "{} is moving to {}, {}"
+  msg = msg.format(name, city, state)
+  print(msg)
+
+moving("Charlie", "Los Angeles", "California")
+
+def get_cities(students):
+    '''Return a [list] of all cities from the students list'''
+    # TODO Make a empty list
+    # TODO Iterate through the list of student
+    # TODO Append each city in the dict to the empty list
+    # TODO return the list
+
+    result = []
+
+    for s in students:
+        if s.get('city'):
+            result.append(s.get('city'))
+
+    return result
+
+print('Cities list: ', get_cities(students))
+
+def get_names(students):
+
+    result = []
+
+    for s in students:
+        if s.get('name'):
+            result.append(s.get('name'))
+        
+    return result
+
+print('Names list: ', get_names(students))
