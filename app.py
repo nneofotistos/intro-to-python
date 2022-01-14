@@ -93,18 +93,42 @@ for i in range(len(nums)):
     print(element)
 
 students = [
-    {
+    { 
         "name": "Kimmie",
         "city": "Atlanta"
     },
-    {
+    { 
         "name": "Chris",
         "city": "Salt Lake City"
     },
-    {
+    { 
         "name": "Zack",
         "city": "Los Angeles"
-    }
+    },
+     { 
+        "name": "John",
+        "city": "Atlanta"
+    },
+    { 
+        "name": "Jane",
+        "city": "New York"
+    },
+    { 
+        "name": "Rob",
+        "city": "Los Angeles"
+    },
+     { 
+        "name": "Harper",
+        "city": "Washington"
+    },
+    { 
+        "name": "Mike",
+        "city": "Seattle"
+    },
+    { 
+        "name": "Set",
+        "city": "San Francisco"
+    },
 ]
 
 for i in range(len(students)):
@@ -159,3 +183,24 @@ def get_names(students):
     return result
 
 print('Names list: ', get_names(students))
+
+def parse_by_city(students):
+    '''Return a dict that has a key for each city'''
+
+    result = {}
+
+    for student in students:
+        print('print INSIDE', student)
+        if result.get('city'):
+            if result.get(student.get('city')):
+                print('Does not exist')
+                result[student.get('city')] = []
+                city_list = result[student.get('city')]
+                city_list.append(student.get('name'))
+            else:
+                print('Does exist')
+        
+        
+    return result
+
+print(parse_by_city(students))
