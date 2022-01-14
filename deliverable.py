@@ -63,4 +63,33 @@ if str1[len(str1) -1] == str1[len(str1) -1].capitalize():
     print('ends with a capital')
 
 # 10
-num1
+num1 = -44
+if num1 > 0:
+    print('positive')
+elif num1 < 0:
+    print('negative')
+else:
+    print(0)
+
+if num1 % 2 == 0:
+    print('even')
+else:
+    print('odd')
+
+# 11
+num3 = 11
+if num3 > 5:
+    print('if')
+
+# 12
+
+def fizz_buzz(max):
+    for i in range(max):
+        if i % 3 == 0 and i % 5 != 0:
+            print(i, 'fizz')
+        elif i % 5 == 0 and i % 3 != 0:
+            print(i, 'buzz')
+        elif i % 5 == 0 and i % 3 == 0:
+            print(i, 'fizzbuzz')
+
+fizz_buzz(30)
