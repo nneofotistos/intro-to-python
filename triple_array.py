@@ -16,8 +16,8 @@ numbers1 = [1, 2, 3]
 numbers2 = [4, 5, 6]
 numbers3 = [7, 8, 9]
 
-result4 = map(lambda x, y: x * y, numbers1, numbers2)
+result4 = map(lambda x, y: x + y, numbers1, numbers2)
 print('result 4 -> list', list(result4))
 
-result5 = map(lambda x, y, z: x * y * z, numbers1, numbers2, numbers3)
+result5 = map(lambda x, y, z: x + y + z, numbers1, numbers2, numbers3)
 print('result 5 -> list', list(result5))
